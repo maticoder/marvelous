@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./styles/variables.scss";
+@import "./styles/breakpoints.scss";
 @import "./styles/components.scss";
 @import "./styles/pages.scss";
 
@@ -12,4 +13,44 @@
 body,
 html {
   font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1480px;
+  padding: 0 32px;
+  margin: 0 auto;
+  height: 100%;
+
+  @include media("<=1560px") {
+    max-width: 1340px;
+  }
+
+  @include media("<=desktop") {
+    max-width: 1100px;
+  }
+
+  @include media("<=1080px") {
+    padding: 0 72px;
+  }
+
+  @include media("<=700px") {
+    padding: 0 32px;
+  }
+}
+
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.cursor {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  background-color: #e7dede;
+  border-radius: 100%;
+  pointer-events: none;
 }
