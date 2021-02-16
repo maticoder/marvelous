@@ -1,14 +1,8 @@
 import React, { useState, useContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { motion } from "framer-motion";
-
-// import custom hooks
-import useMousePosition from "./hooks/useMousePosition";
-
-// import context
-import { UiProvider, UiContext } from "./utils/UiContext";
 
 // components imports
+import Cursor from "./components/Cursor/Cursor";
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 
@@ -18,25 +12,9 @@ import Home from "./pages/Home/Home";
 import "./App.scss";
 
 const App = () => {
-  const { x, y } = useMousePosition();
-
-  const { cursor } = useContext(UiContext);
-
   return (
     <div className="app">
-      <motion.div
-        animate={{
-          x: x - 20,
-          y: y - 20,
-          scale: cursor ? 1.2 : 1,
-          opacity: cursor ? 0.8 : 0,
-        }}
-        transition={{
-          ease: "linear",
-          duration: 0.2,
-        }}
-        className="cursor"
-      ></motion.div>
+      <Cursor />
       <Router>
         <Header />
         <Switch>
