@@ -1,5 +1,8 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// context imports
+import { UiProvider } from "./utils/UiContext";
 
 // components imports
 import Cursor from "./components/Cursor/Cursor";
@@ -14,13 +17,15 @@ import "./App.scss";
 const App = () => {
   return (
     <div className="app">
-      <Cursor />
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/" component={Home} />
-        </Switch>
-      </Router>
+      <UiProvider>
+        <Cursor />
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </Router>
+      </UiProvider>
     </div>
   );
 };

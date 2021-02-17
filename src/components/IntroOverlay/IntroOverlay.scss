@@ -1,0 +1,81 @@
+.intro-overlay {
+  .top {
+    height: 50vh;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    .overlay-top {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      @include media("<=tablet") {
+        width: 100vw;
+      }
+
+      &:nth-child(2) {
+        left: 33.333%;
+
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        left: 66.666%;
+
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+
+    .overlay-bottom {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+      right: 66.666%;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          @include media("<=tablet") {
+            top: calc(#{$i - 1} * 100%);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        right: 33.333%;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+      }
+
+      &:nth-child(n + 4) {
+        display: none;
+      }
+
+      @include media("<=tablet") {
+        right: 0 !important;
+        width: 100vw;
+        display: initial !important;
+      }
+    }
+  }
+}
