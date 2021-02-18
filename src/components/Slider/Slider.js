@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 import { ReactComponent as ArrowLeft } from "../../images/arrow-left.svg";
@@ -6,6 +6,12 @@ import { ReactComponent as ArrowRight } from "../../images/arrow-right.svg";
 
 const Slider = ({ unit, offset, children }) => {
   const [position, setPosition] = useState(0);
+
+  const leftArrowCondition = useMemo(() => position === 0, [position]);
+  const rightArrowCondition = useMemo(
+    () => position === -(children.length - 3) * 33.33,
+    [position, children.length]
+  );
 
   return (
     <div className="slider">
@@ -19,9 +25,11 @@ const Slider = ({ unit, offset, children }) => {
         </motion.div>
       ))}
       <span
-        className={`arrow arrow-left ${position === 0 ? "arrow-disabled" : ""}`}
+        className={`arrow arrow-left ${
+          leftArrowCondition ? "arrow-disabled" : ""
+        }`}
         onClick={
-          position !== 0
+          !leftArrowCondition
             ? () => setPosition((position) => position + offset)
             : null
         }
@@ -30,10 +38,10 @@ const Slider = ({ unit, offset, children }) => {
       </span>
       <span
         className={`arrow arrow-right ${
-          position === -(children.length - 3) * 33.33 ? "arrow-disabled" : ""
+          rightArrowCondition ? "arrow-disabled" : ""
         }`}
         onClick={
-          position !== -(children.length - 3) * 33.33
+          !rightArrowCondition
             ? () => setPosition((position) => position - offset)
             : null
         }
