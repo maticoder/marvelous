@@ -17,7 +17,7 @@ const Intro = () => {
             </div>
           </h2>
           <div className="button-arrow">
-            <Link to="/">
+            <Link to="/about">
               More about us <RightArrow />
             </Link>
           </div>

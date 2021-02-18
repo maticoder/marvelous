@@ -1,13 +1,15 @@
 import React from "react";
 
-import Case from '../Case/Case';
+import Case from "../Case/Case";
 import Slider from "../Slider/Slider";
 
-const Cases = ({cases}) => {
+const Cases = ({ cases }) => {
   return (
     <div className="cases">
       <Slider unit="vw" offset={33.33}>
-        {cases.map(c => <Case title={c.title} subtitle={c.subtitle} src={c.img} />)}
+        {cases.map((c) => (
+          <Case key={c.id} title={c.title} subtitle={c.subtitle} src={c.img} />
+        ))}
       </Slider>
     </div>
   );
