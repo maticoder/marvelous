@@ -9,8 +9,8 @@ const IntroOverlay = ({ count }) => {
         <div className="overlay-top"></div>
       </div>
       <div className="bottom">
-        {new Array(count).fill(0).map((e) => (
-          <div className="overlay-bottom"></div>
+        {[...new Array(count)].map((e, i) => (
+          <div key={i} className="overlay-bottom"></div>
         ))}
       </div>
     </div>

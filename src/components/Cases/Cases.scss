@@ -1,2 +1,44 @@
 .cases {
+  height: 50vh;
+
+  @include media("<=tablet") {
+    height: initial;
+  }
+
+  &-box {
+    width: 33.33vw;
+    height: 100%;
+
+    @include media("<=tablet") {
+      width: 100vw;
+    }
+
+    &-one {
+      background-color: pink;
+    }
+
+    &-two {
+      background-color: rgb(224, 97, 97);
+    }
+
+    &-three {
+      background-color: rgb(95, 95, 209);
+    }
+
+    &-four {
+      background-color: rgb(69, 228, 117);
+    }
+
+    &-five {
+      background-color: rgb(238, 238, 89);
+    }
+
+    &-six {
+      background-color: rgb(255, 174, 24);
+    }
+
+    &-seven {
+      background-color: rgb(130, 38, 167);
+    }
+  }
 }

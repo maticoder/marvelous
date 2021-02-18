@@ -5,6 +5,8 @@ import Intro from "../../components/Intro/Intro";
 import Cases from "../../components/Cases/Cases";
 import IntroOverlay from "../../components/IntroOverlay/IntroOverlay";
 
+const cases = [1, 2, 3, 4, 5, 6, 7];
+
 const Home = () => {
   const [animationEnd, setAnimationEnd] = useState(false);
 
@@ -40,9 +42,9 @@ const Home = () => {
 
   return (
     <>
-      {!animationEnd && <IntroOverlay count={3} />}
+      {!animationEnd && <IntroOverlay count={cases.length} />}
       <Intro />
-      <Cases />
+      <Cases cases={cases} />
     </>
   );
 };
