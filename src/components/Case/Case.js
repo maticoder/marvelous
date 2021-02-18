@@ -1,9 +1,19 @@
 import React from "react";
 
-const Case = () => {
+const Case = ({
+  src,
+  title,
+  subtitle
+}) => {
   return (
     <div className="case">
-      <h1>case</h1>
+      <div className="case-details">
+        <span>{subtitle}</span>
+        <h2>{title}</h2>
+      </div>
+      <div className="case-image">
+        <img src={src} alt={title}/>
+      </div>
     </div>
   );
 };

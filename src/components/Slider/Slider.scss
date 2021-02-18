@@ -17,6 +17,7 @@
 
     @include media("<=tablet") {
       position: relative;
+      width: 100vw;
       transform: translateX(0) !important;
     }
   }
