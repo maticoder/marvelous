@@ -10,14 +10,14 @@ const Intro = () => {
         <div className="row">
           <h2>
             <div className="line">
-              <span>Creating unique brands is</span>
+              <span>Jobs fill your pockets,</span>
             </div>
             <div className="line">
-              <span>what we do.</span>
+              <span>adventures fill your soul.</span>
             </div>
           </h2>
           <div className="button-arrow">
-            <Link to="/about">
+            <Link to="/tokyo">
               More about us <RightArrow />
             </Link>
           </div>

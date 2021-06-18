@@ -10,6 +10,7 @@ const CursorHoverBox = ({ children }) => {
       className="cursorHoverBox"
       onMouseEnter={() => setCursor(true)}
       onMouseLeave={() => setCursor(false)}
+      onClick={() => setCursor(false)}
     >
       {children}
     </div>

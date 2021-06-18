@@ -1,0 +1,34 @@
+.textReveal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+
+  &__cover {
+  }
+
+  &-initialCover {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+
+  &-coverGray {
+    position: absolute;
+    // left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #747474;
+  }
+
+  &-coverGray--left {
+    left: 0;
+  }
+
+  &-coverGray--right {
+    right: 0;
+  }
+}

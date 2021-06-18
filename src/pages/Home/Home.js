@@ -5,42 +5,47 @@ import Intro from "../../components/Intro/Intro";
 import Cases from "../../components/Cases/Cases";
 import IntroOverlay from "../../components/IntroOverlay/IntroOverlay";
 
-import CurologyImage from "../../images/curology-min.png";
-import YourspaceImage from "../../images/yourspace-min.png";
-import LuminImage from "../../images/lumin-min.png";
-import DocusignImage from "../../images/docusign-min.png";
-import SurfaceImage from "../../images/surface-min.png";
+import TokyoImage from "../../images/tokyo-min.png";
+import ParisImage from "../../images/paris-min.png";
+import BarcelonaImage from "../../images/barcelona-min.png";
+import RomeImage from "../../images/rome-min.png";
+import AmsterdamImage from "../../images/amsterdam-min.png";
 
 const cases = [
   {
     id: 1,
-    subtitle: "Curology",
-    title: "A custom formule for your skin's unique needs",
-    img: CurologyImage,
+    subtitle: "Tokyo",
+    title: "Tokyo is enigmatic, it is the heart of that riddle",
+    img: TokyoImage,
+    to: "/tokyo",
   },
   {
     id: 2,
-    subtitle: "Yourspace",
-    title: "Open space floor plans for you next venture",
-    img: YourspaceImage,
+    subtitle: "Paris",
+    title: "It is perfectly possible to be enamoured of Paris",
+    img: ParisImage,
+    to: "/paris",
   },
   {
     id: 3,
-    subtitle: "Lumin",
-    title: "For your best look ever",
-    img: LuminImage,
+    subtitle: "Barcelona",
+    title: "To me, Madrid is a man and Barcelona is a woman",
+    img: BarcelonaImage,
+    to: "/barcelona",
   },
   {
     id: 4,
-    subtitle: "Docusign",
-    title: "Get the security, mobility and reliability",
-    img: DocusignImage,
+    subtitle: "Rome",
+    title: "Rome is the city of echoes, the city of illusions",
+    img: RomeImage,
+    to: "/rome",
   },
   {
     id: 5,
-    subtitle: "Surface",
-    title: "Integrated surface solution company",
-    img: SurfaceImage,
+    subtitle: "Amsterdam",
+    title: "In Amsterdam, the water is the mistress",
+    img: AmsterdamImage,
+    to: "/amsterdam",
   },
 ];
 

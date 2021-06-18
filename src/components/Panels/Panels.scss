@@ -1,0 +1,16 @@
+.left-panel-background,
+.right-panel-background {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 11;
+  background: $pink;
+}
+
+.left-panel-background {
+  left: 0;
+}
+
+.right-panel-background {
+  right: 0;
+}

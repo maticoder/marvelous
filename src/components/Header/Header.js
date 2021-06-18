@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+
+import { UiContext } from "../../utils/UiContext";
 
 import CursorHoverBox from "../CursorHoverBox/CursorHoverBox";
 
 const Header = () => {
+  const { setMenu } = useContext(UiContext);
+
   return (
     <div className="header">
       <div className="container">
@@ -16,7 +21,7 @@ const Header = () => {
             </div>
           </CursorHoverBox>
           <CursorHoverBox>
-            <div className="hamburger">
+            <div className="hamburger" onClick={() => setMenu(true)}>
               <div className="hamburger-menu">
                 <span></span>
                 <span></span>
@@ -27,6 +32,10 @@ const Header = () => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  setActive: PropTypes.func,
 };
 
 export default Header;

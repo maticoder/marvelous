@@ -23,6 +23,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.shrink {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .container {
   max-width: 1480px;
   padding: 0 32px;
@@ -66,4 +71,10 @@ html {
   background-color: #e7dede;
   border-radius: 100%;
   pointer-events: none;
+  z-index: 1000;
 }
+
+// ::-webkit-scrollbar {
+//   width: 0px;
+//   background: transparent; /* make scrollbar transparent */
+// }
